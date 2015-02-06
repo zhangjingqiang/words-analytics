@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  post '/', to: 'welcome#index'
   root 'welcome#index'
+  post '/', to: 'welcome#index'
 end
