@@ -1,0 +1,18 @@
+<h1>输入一句话</h1>
+<div class="form-group">
+  <form action="<%= root_path %>" method="post">
+    <textarea class="form-control" rows="5" id="word" name="word" required><%= params[:word] %></textarea><br />
+    <div class="text-center"><button type="submit" class="btn btn-primary">提交</button></div>
+  </form>
+</div>
+
+<% if params[:word] %>
+<p>
+  <div class="alert alert-success">
+    <%= image_tag 'smile.png' %> 正面情绪： <b><%= number_to_percentage(@good * 100, precision: 0) %></b>
+  </div>
+  <div class="alert alert-danger">
+    <%= image_tag 'rage.png' %> 负面情绪： <b><%= number_to_percentage(@bad * 100, precision: 0) %></b>
+  </div>
+</p>
+<% end %>

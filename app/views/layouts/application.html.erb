@@ -12,13 +12,6 @@
 <body>
   <%= render 'layouts/header' %>
   <div class="container">
-    <h1>输入一句话</h1>
-    <div class="form-group">
-      <form action="<%= analytics_path %>" method="post">
-        <textarea class="form-control" rows="5" id="word" name="word" required><%= params[:word] %></textarea><br />
-        <div class="text-center"><button type="submit" class="btn btn-primary">提交</button></div>
-      </form>
-    </div>
     <%= yield %>
     <hr>
     <%= render 'layouts/footer' %>

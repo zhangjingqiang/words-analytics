@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  post 'analytics', to: 'analytics#index', as: 'analytics'
+  post '/', to: 'welcome#index'
   root 'welcome#index'
 end
